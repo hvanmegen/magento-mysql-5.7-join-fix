@@ -1,0 +1,2 @@
+# app/code/local/Mage override
+src/app/code/local/Mage/Catalog/Helper/Category/Url/Rewrite.php		app/code/local/Mage/Catalog/Helper/Category/Url/Rewrite.php
