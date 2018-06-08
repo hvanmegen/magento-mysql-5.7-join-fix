@@ -9,6 +9,3 @@ I'm pretty sure the problem still exists in Magento 2.x.. feel free to correct m
 
 # How to use?
 Either copy the contents of the src folder to your Magento installation folder or deploy this module with [modman](https://github.com/colinmollenhour/modman).
-
-
-GROETJES VAN BO BERGMANS!
