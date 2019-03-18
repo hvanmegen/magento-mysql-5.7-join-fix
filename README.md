@@ -1,4 +1,4 @@
-# Magento 1 fix for slow category pages or listings using MySQL 5.7
+# Magento 1 fix for slow category pages using MySQL 5.7
 
 ## magento-mysql-5.7-join-fix
 This patch fixes an issue with Magento bizarre way of constructing queries to join all data required for category listings causing MySQL's table indexes to fail and queries to take 5 to 40 times longer than normal when using MySQL / MariaDB / Percona equivalent to MySQL 5.7 and up, compatible with Magento 1.x.
