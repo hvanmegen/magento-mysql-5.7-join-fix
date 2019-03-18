@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Catalog
- * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -73,7 +73,7 @@ class Mage_Catalog_Helper_Category_Url_Rewrite
             'core/url_rewrite',
             'category_id=entity_id',
             array('request_path'),
-                "{{table}}.is_system=1 AND " .
+            "{{table}}.is_system=1 AND " .
                 "{{table}}.store_id='{$storeId}' AND " .
                 "{{table}}.category_id IS NOT null AND " .
                 "{{table}}.id_path LIKE 'category/%'",
@@ -94,7 +94,7 @@ class Mage_Catalog_Helper_Category_Url_Rewrite
         $collection->getSelect()->joinLeft(
             array('url_rewrite' => $collection->getTable('core/url_rewrite')),
             'url_rewrite.category_id = main_table.entity_id AND url_rewrite.is_system = 1 '.
-                ' AND ' . $collection->getConnection()->quoteInto('url_rewrite.store_id = ?', (int)$storeId).
+                ' AND ' . $collection->getConnection()->quoteInto('url_rewrite.store_id = ?', $storeId).
                 ' AND ' . 'url_rewrite.category_id IS NOT null' .
                 ' AND ' . $collection->getConnection()->quoteInto('url_rewrite.id_path LIKE ?', 'category/%'),
             array('request_path')
